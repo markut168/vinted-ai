@@ -1,0 +1,28 @@
+<!doctype html><html lang="it"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#007782"><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css">
+<title>Vinted AI</title></head><body>
+<div class="app">
+<header><div class="brand"><div class="mark">V</div><div><b>Vinted AI</b><span>Il tuo assistente per gli annunci</span></div></div><button id="theme" class="icon">☾</button></header>
+<section id="home" class="screen active">
+<div class="hero"><div><small>ANNUNCIO INTELLIGENTE</small><h1>Metti le foto.<br><em>Il resto lo fa l'AI.</em></h1><p>Analizza il tuo articolo e prepara un annuncio pronto da copiare.</p></div></div>
+<div class="panel">
+<label class="drop"><input id="photos" type="file" accept="image/*" multiple><span>＋</span><strong>Aggiungi foto</strong><small>Scatta o scegli dalla galleria</small></label>
+<div id="preview" class="preview"></div>
+<div class="fields">
+<label>Marca<input id="brand" placeholder="es. Nike"></label><label>Taglia<input id="size" placeholder="es. M"></label>
+<label>Condizioni<select id="condition"><option>Come nuovo</option><option>Ottime condizioni</option><option>Buone condizioni</option><option>Usato</option></select></label>
+<label>Prezzo desiderato (€)<input id="price" type="number" step=".50" placeholder="Facoltativo"></label>
+</div>
+<label>Note <textarea id="extra" placeholder="Colore, difetti, materiale, vestibilità..."></textarea></label>
+<button id="generate" class="primary">✨ Genera annuncio</button><p id="status"></p>
+</div></section>
+<section id="listing" class="screen"><button class="back" data-go="home">‹ Nuovo annuncio</button><div class="panel">
+<div class="result-title"><div><small>GENERATO DALL'AI</small><h2>Il tuo annuncio</h2></div><button id="copy" class="secondary">Copia tutto</button></div>
+<label>Titolo<input id="title"></label><label>Descrizione<textarea id="description"></textarea></label>
+<div class="fields"><label>Categoria<input id="category"></label><label>Prezzo consigliato<input id="suggested"></label></div>
+<label>Hashtag<input id="hashtags"></label><button id="save" class="primary">💾 Salva annuncio</button>
+</div></section>
+<section id="history" class="screen"><h2>I miei annunci</h2><div id="historyList"></div></section>
+<nav><button data-go="home">＋<span>Nuovo</span></button><button data-go="history">▣<span>Salvati</span></button></nav>
+</div><script src="app.js"></script></body></html>
